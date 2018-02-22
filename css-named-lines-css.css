@@ -1,0 +1,55 @@
+body{
+background-color: navy;
+}
+.container {
+  width: 800px;
+  display: grid;
+  height: 600px;
+  grid-gap: 1rem;
+  grid-template-columns:
+    [main-start sidebar-start] 200px
+    [sidebar-end content-start] 1fr
+    [column3-start] 1fr
+    [content-end main-end];
+  grid-template-rows:
+    [row1-start] 80px
+    [row2-start] 1fr
+    [row3-start] 1fr
+    [row4-start] 100px
+    [row4-end];
+}
+.header {
+  grid-column: main-start / main-end;
+  grid-row: row1-start / row2-start;
+  background-color: springgreen;
+}
+
+.sidebar {
+  grid-column: sidebar-start / sidebar-end;
+  grid-row: row2-start / row4-start;
+  background-color: springgreen;
+}
+
+.content-1 {
+  grid-column: content-start / content-end;
+  grid-row: row2-start / row3-start;
+  background-color: springgreen;
+}
+
+.content-2 {
+  grid-column: content-start / column3-start;
+  grid-row: row3-start / row4-start;
+  background-color: springgreen;
+}
+
+.content-3 {
+  grid-column: column3-start / content-end;
+  grid-row: row3-start / row4-start;
+  background-color: springgreen;
+}
+
+.footer {
+  grid-column: main-start / main-end;
+  grid-row: row4-start / row4-end;
+  background-color: springgreen;
+}
